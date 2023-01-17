@@ -12,4 +12,5 @@ FROM scratch
 COPY --from=certs /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY --from=builder /build/build/openvpnas_exporter /bin/openvpnas_exporter
 EXPOSE 9176
+ENV GOMEMLIMIT=256MiB
 ENTRYPOINT ["/bin/openvpnas_exporter"]
