@@ -162,7 +162,7 @@ func (e *OpenVPNExporter) CollectSubscriptionStatistics(client xmlrpc.Client, ch
             Name                    string   `xml:"name"`
             NextUpdate              int      `xml:"next_update"`
             NextUpdateIn            int      `xml:"next_update_in"`
-            Notes                   []string `xml:"notes"`
+            Notes                   string   `xml:"notes"`
             Overdraft               bool     `xml:"overdraft"`
             Server                  string   `xml:"server"`
             State                   string   `xml:"state"`
